@@ -1,0 +1,21 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+
+entity Eslik is
+ 	Port(giris: in std_logic_vector(15 downto 0);
+		cikis: out std_logic);
+
+end entity;
+
+Architecture tasarim of Eslik is
+	signal tekMi: std_logic;
+
+Begin
+	tekMi <=giris(0) xor giris(1) xor giris(2) xor giris(3) xor giris(4) xor giris(5) xor giris(6) 
+	xor giris(7) xor giris(8) xor giris(9) xor giris(10) xor giris(11) xor giris(12) xor giris(13) xor giris(14);
+	
+	
+		cikis <= tekMi;
+	
+	
+end tasarim;
